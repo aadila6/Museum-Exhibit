@@ -1,56 +1,74 @@
-body{
-    
+* {
+    box-sizing: border-box;
+  }
+body {
     display: flex;
     flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
-    
+    font-family: "Open Sans", sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    min-height: 100vh;
 }
 
-header{
+header {
     font-size: medium;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 1.5%;
-    padding-bottom:1.5%;
+    padding-bottom: 1.5%;
+    
+    /* margin: 0 0 20px 0; */
 }
+
 em {
-    color :#c9523d;
+    color: #c9523d;
     font-weight: 700;
     font-style: normal;
 }
 
-.top{
+.top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding:1%;
-    font-family: 'Montserrat', sans-serif;
+    padding: 1%;
+    font-family: "Montserrat", sans-serif;
     font-weight: lighter;
-    
+    /* margin: 0 0 20px 0; */
+    flex: 1 0 auto;
+
 }
 
-.title{
+.title {
     align-items: left;
     font-weight: lighter;
     color: #2a2d7c;
-    
+    /* padding-left: 1%; */
+    /* flex: 1 0 auto; */
 }
 
-.menu{
+.menu {
     align-items: right;
     font-size: medium;
     font-weight: lighter;
-    /* display:flex;
-    flex-direction: row; */
-}
-#lala{
-    padding-left: 3%;
-    padding-right: 3%;
+    display: flex;
+    flex-direction: row;
+    color: #2a2d7c;
+    /* padding-right: 1%; */
 }
 
-.main{
+.menuItem {
+    padding-right: 15px;
+    text-decoration-line: none;
+    color: black;
+}
+
+.main {
+    /* margin: 0 0 20px 0; */
     font-size: small;
-
+    width: 100%;
+    flex: 1 0 auto;
+    /* margin: 0 0 20px 0; */
 }
 
 .logo {
@@ -59,96 +77,121 @@ em {
     align-items: center;
     height: 200px;
     background-color: black;
-    font-family: 'Open Sans', sans-serif;
-  }
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    flex: 1;
+}
 
-.number{
+.number {
     color: white;
     font-size: 80px;
-    font-family: 'Open Sans', sans-serif;
-    
+    font-family: "Open Sans", sans-serif;
+    /* padding: 10%; */
 }
 
-.content{
+.content {
     padding-left: 22%;
     padding-right: 22%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    /* display: flex; */
+    flex: 1;
+    margin: 0 0 20px 0;
 }
 
-.content_title{
+.content_title {
     text-align: center;
     padding: 2%;
 }
-#tit{
+
+#tit {
     font-size: 28px;
     font-weight: 600;
     padding: 2%;
+    padding-bottom: 3%;
 }
-#date{
-    font-size: 25px;
-    
+
+#date {
+    font-size: 23px;
+    padding: 2%;
 }
-.gallery{
+
+.gallery {
     /* text-align: center; */
-    
     max-width: 1000px;
     position: relative;
     margin: auto;
+    background-color: black;
 }
 
-.text{
+.text {
     /* padding-left: 10%;
-    padding-right: 10%; */
+      padding-right: 10%; */
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 5%;
     font-size: normal;
     line-height: 1.1em;
     font-weight: lighter;
+    /* flex:0; */
     
 }
-#p1{
+
+#p1 {
     padding-bottom: 2%;
 }
 
-footer{
+footer {
     background-color: #c6d2da;
-    font-size: smaller;
-    /* font-weight: lighter; */
-    padding-left: 1%;
-    padding-right: 1%;
+    font-size: 12px;
     justify-content: space-between;
-    padding-top:2%;
-    padding-bottom: 2%;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* flex-shrink: 0; */
+    margin-top: auto;
     
 }
-.foot{
+
+.foot {
     display: flex;
     flex-direction: row;
+    padding: 1.5%;
 }
 
-h3{
-    font-weight: bolder;
-    font-family: 'Montserrat', sans-serif;
-    /* padding-bottom:1%; */
-}
-
-#lit{
+.lit {
     font-weight: lighter;
-}
-.Manetti{
-    padding:0%;
-    padding-right: 1.5%;
-}
-.hours{
-    padding:0%;
-    padding-right: 1.5%;
-}
-.note{
-    padding:0%;
-    padding-right: 1.5%;
+    padding-bottom: 8px;
 }
 
-.prev, .next {
+.Manetti {
+    /* padding:0%; */
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hours {
+    /* padding:0%; */
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.note {
+    padding: 0%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topSec {
+    
+    font-weight: bold;
+    padding-bottom: 15px;
+   
+}
+
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -161,37 +204,55 @@ h3{
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  
-  .next {
+}
+
+/* Position the "next button" to the right */
+
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  .textt {
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.textt {
     color: #f2f2f2;
     font-size: 12px;
-    padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 15px;
     width: 100%;
     text-align: center;
-  }
-  
- 
-  .numbertext {
+    align-items: center;
+}
+
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 12px 12px;
     position: absolute;
     top: 0;
-  }
-  
-  .dot {
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -200,56 +261,131 @@ h3{
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
+}
+
+.active,
+.dot:hover {
     background-color: #717171;
-  }
-  .fade {
+}
+
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  /* Tablet */
-  @media screen and (max-width: 780px){
-
-  }
-
-
-
- /* Mobile */
-@media screen and (max-width: 530px){
-    .top{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-
-    .textt{
-        font-size: 10px;
-
-    }
-    .content{
-        padding-left: 5%;
-        padding-right: 5%;
-
-    }
-    .foot{
-        display: flex;
-        flex-direction: column;
-    }
-    .menu{
-        
-        font-size: medium;
-        font-weight: lighter;
-        justify-content: space-evenly;
-        
-    }
-    
-
 }
 
 
+/* Tablet */
 
+@media screen and (max-width: 768px) {
+    .top {
+        align-items: center;
+        padding: 1%;
+    }
+    .menu {
+        padding-right: 0%;
+    }
+    .content {
+        padding-left: 10%;
+        padding-right: 10%;
+        /* font-family: 'Open Sans', sans-serif; */
+    }
+    footer {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+    }
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: smaller;
+        /* width: 100%; */
+        /* padding:5px; */
+    }
+    .title {
+        padding-bottom: 4%;
+        text-align: center;
+    }
+    .menu {
+        width: 100%;
+        /* padding: 5px; */
+        justify-content: space-between;
+    }
+    .logo {
+        height: 160px;
+    }
+    .number {
+        font-size: 60px;
+    }
+    #tit {
+        font-size: 20px;
+    }
+    #date {
+        font-size: 15px;
+    }
+    .text {
+        font-size: small;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .images {
+        height: 80%;
+        padding-bottom: 10%;
+    }
+    .content_title {
+        padding-left: 5%;
+        /* padding-right: 5%; */
+    }
+    .textt {
+        text-align: center;
+        font-size: 10px;
+    }
+    .gallery {
+        padding: 0px;
+        /* width: 100%; */
+    }
+    .content {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    footer {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .foot {
+        display: flex;
+        flex-direction: column-reverse;
+        /* padding: 5px; */
+    }
+    .menu {
+        justify-content: space-between;
+    }
+    .Manetti {
+        padding: 8px;
+        padding-right: 0%;
+    }
+    .hours {
+        padding: 10px;
+        padding-right: 0%;
+    }
+    .lit {
+        padding-bottom: 2px;
+    }
+    .note {
+        padding: 10px;
+        padding-right: 0%;
+    }
+    .menu {
+        font-size: medium;
+        font-weight: lighter;
+        justify-content: space-evenly;
+    }
+}
